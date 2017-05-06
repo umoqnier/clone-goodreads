@@ -18,9 +18,9 @@ class Book(models.Model):
 
     id = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=100)
-    autor = models.ForeignKey(Author,on_delete=models.CASCADE)
+    autor = models.ForeignKey(Author, on_delete=models.CASCADE)
     ISBN = models.CharField(max_length=100, unique=True)
-    fecha_publicacio = models.DateField(null=True)
+    fecha_publicacion = models.DateField(null=True)
     foto_portada = models.URLField(blank=True, null=True)
     descripcion = models.TextField()
     rating = models.DecimalField(max_digits=3, decimal_places=2, default=0.00)
