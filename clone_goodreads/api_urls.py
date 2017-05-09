@@ -7,5 +7,6 @@ urlpatterns = [
     url(r'^books/', include("modules.books.urls")),
     url(r'^auth/', obtain_jwt_token),
     url(r'^auth/refresh/', refresh_jwt_token),
-    url(r'^auth/verify/', verify_jwt_token)
+    url(r'^auth/verify/', verify_jwt_token),
+    url(r'^o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 ]
